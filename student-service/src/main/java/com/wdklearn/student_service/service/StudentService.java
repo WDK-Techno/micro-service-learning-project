@@ -34,7 +34,7 @@ public class StudentService {
     public ResponseEntity<?> fetchStudentById(String id) {
         Optional<Student> student = studentRepository.findById(id);
         if (student.isPresent()) {
-            SchoolDTO school = restTemplate.getForObject("http://localhost:8082/school/" + student.get().getSchoolId(),
+            SchoolDTO school = restTemplate.getForObject("http://SCHOOL-SERVICE/school/" + student.get().getSchoolId(),
                     SchoolDTO.class);
             StudentResponseDTO studentResponse = new StudentResponseDTO(
                     student.get().getId(),
