@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.wdklearn.student_service.model.Student;
 import com.wdklearn.student_service.service.StudentService;
 
-import lombok.AllArgsConstructor;
-
 @CrossOrigin("*")
 @RestController
 @RequestMapping("students")
